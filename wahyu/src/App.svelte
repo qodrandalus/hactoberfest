@@ -8,7 +8,12 @@
   ];
 
   function addToList() {
-		todoLists = [...todoLists, {text: items, status: false}];
-		items = '';
-	}
+    todoLists = [...todoLists, { text: items, status: false }];
+    items = "";
+  }
+
+  function removeFromList(index) {
+    todoLists.splice(index, 1);
+    todoLists = todoLists;
+  }
 </script>
