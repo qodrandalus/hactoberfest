@@ -17,3 +17,11 @@
     todoLists = todoLists;
   }
 </script>
+
+<br/>
+{#each todoLists as item, index}
+	<input bind:checked={item.status} type="checkbox">
+	<span class:checked={item.status}>{item.text}</span>
+	<span on:click={() => removeFromList(index)}>❌</span>
+	<br/>
+{/each} 
