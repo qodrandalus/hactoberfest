@@ -18,6 +18,9 @@
   }
 </script>
 
+<input bind:value={items} type="text" placeholder="new todo item..">
+<button on:click={addToList}>Add</button>
+
 <br/>
 {#each todoLists as item, index}
 	<input bind:checked={item.status} type="checkbox">
@@ -25,3 +28,9 @@
 	<span on:click={() => removeFromList(index)}>❌</span>
 	<br/>
 {/each} 
+
+<style> 
+	.checked {
+        text-decoration: line-through;
+    }
+</style> 
